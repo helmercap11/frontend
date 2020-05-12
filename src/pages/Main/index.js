@@ -18,14 +18,14 @@ export default class Main extends Component {
             title: this.state.newBox,
         });
 
-        
-    }
+        this.props.history.push(`/box/${response.data._id}`);
+    };
 
     handleInputChange = e => {
         this.setState({
             newBox: e.target.value
         });
-    }
+    };
 
     render(){
         return(
